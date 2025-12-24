@@ -35,4 +35,7 @@ try:
             st.error("Movie not found or no recommendations available.")
 
 except FileNotFoundError:
-    st.error("Data files not found! Please make sure 'movies.csv' and 'ratings.csv' are in the 'data' 
+    st.error("Data files not found! Please make sure 'movies.csv' and 'ratings.csv' are in the 'data' folder.")
+
+except Exception as e:
+    st.error(f"Something went wrong: {e}")
